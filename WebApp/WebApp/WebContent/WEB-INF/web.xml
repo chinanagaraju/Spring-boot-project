@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>WebApp</display-name>
+  <welcome-file-list>
+    <welcome-file>Home.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Account</display-name>
+    <servlet-name>Account</servlet-name>
+    <servlet-class>com.naga.Account</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Account</servlet-name>
+    <url-pattern>/Account</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>AccountFilter</display-name>
+    <filter-name>AccountFilter</filter-name>
+    <filter-class>com.naga.filter.AccountFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AccountFilter</filter-name>
+    <servlet-name>Account</servlet-name>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Succes</display-name>
+    <servlet-name>Succes</servlet-name>
+    <servlet-class>com.naga.ui.Succes</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Succes</servlet-name>
+    <url-pattern>/Succes</url-pattern>
+  </servlet-mapping>
+</web-app>
